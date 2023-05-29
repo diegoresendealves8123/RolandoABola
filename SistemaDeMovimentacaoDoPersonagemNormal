@@ -1,0 +1,61 @@
+using System.Collections;//Utilitarios
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using TMPro;
+
+public class controledojogador : MonoBehaviour//Programa principal
+{//Inicio da classe
+    public float speed = 1;//Variavel velocidade comeca com um//Velocidade do jogador
+    public TextMeshProUGUI pointsText;//Variavel publica comando TestMashProUGUI nome da variavel tipo da variavel//pontos do jogo
+    public GameObject winText;//Variavel publica tipo do Objeto nome do comando//Objeto do jogo
+    public int totalPoints;//Variavel publica do tipo inteiro totalpoints
+    private int points;//Variavel privada do tipo inteiro de nome pontos//pontos do jogo
+    //private Rigidbody rb;
+    public Rigidbody rb;
+    private float movementx;
+    private float movementy;
+    // Start is called before the first frame update
+    void Start()//Funcao inicio do jogo//Inicia o jogo//Funcao 1
+    {
+        rb = GetComponent<Rigidbody>();
+        points = 0;//Variavel points comeca com zero
+        SetPointsText();
+    }
+
+    // Update is called once per frame
+    /*void Update()//Funcao atualizar tela de jogo//Atualiza a tela do jogo//Funcao 2
+    {
+        
+    }*/
+    private void FixedUpdate()//Funcao atualizar tela de jogo de forma fixa//Atualiza a tela do jogo de forma fixa//Funcao 3
+    {
+        Vector3 movement = new Vector3(movementx, 0.0f, movementy);
+        rb.AddForce(movement * speed);
+    }
+    private void OnMove(InputValue movementValue)
+    {
+        Vector2 movementVector = movementValue.Get<Vector2>();
+        movementx = movementVector.x;
+        movementy = movementVector.y;
+    }
+
+    private void OnTriggerEnter(Collider other)//Gatilho de evento
+    {
+        if (other.CompareTag("Pickup"))
+        {
+            points += 1;//Variavel points recebe variavel points mais um//Contador de pontos do jogo
+            SetPointsText();
+            other.gameObject.SetActive(false);
+            Debug.Log(points);//Comando Debug.log argumento para fora fecha dentro do argumento nome da variavel
+        }
+    }
+    void SetPointsText()
+    {
+        pointsText.text = "Points: " + points;//Nome da variavel tipo da variavel ligado no texto recebe Pontos mais pontos//Contagem de pontos do jogo
+        if (points >= totalPoints)//for argumento para fora corpo dentro do argumento points maior ou igual a treze//Se pontos for maior ou igual a treze
+        {
+            winText.SetActive(true);//Comando winText ligado no comando SetActive argumento para fora fecha dentro do argumento true//Se texto for verdadeiro aparece na tela
+        }
+    }
+}//Final da classe
