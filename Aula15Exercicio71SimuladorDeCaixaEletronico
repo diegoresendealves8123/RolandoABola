@@ -1,0 +1,30 @@
+from time import sleep#Da biblioteca tempo imprtar somente o recurso doirmir
+print("\033[0;33;44m=\033[m" * 14)#Linha vazia
+print("\033[0;33;42mBANCO CEV\033[m")#Nome do programa
+print("\033[0;33;44m=\033[m" * 14)#Linha vazia
+valor = int(input("\033[0;33;42mQue valor voce quer sacar? RS\033[m"))
+total = valor#Variavel do tipo inteiro de nome total recebe variavel do tipo inteiro valor
+ced = 50 #Variavel do tipo dinteiro de nome cedula comeca com cinquenta reais
+totced = 0 #Variavel do tipo inteiro de nome total de cedulas comeca com zero
+while True:#Enquanto for verdadeiro o programa roda para sempre
+    if total >= ced:#Se total de cedulas for maior ou igual a cedulas
+        total -= ced#Variavel do tipo inteiro de nome total menos igual a variavel do tipo intiro de nome cedula
+        totced += 1 #Variavel do tipo inteiro de nome totced mais igual a um
+    else:#Se naos
+        if totced > 0:#Se total de cedulas for maior que zero
+            print("\033[0;33;42mTotal de {} cedulas de {} reais\033[m".format(totced, ced))#Saida de dados 1
+        if ced == 50:#Se cedula for cinquenta
+            ced = 20 #Variavel do tipo inteiro de nome ced recebe vinte
+        elif ced == 20:#Se cedula for vinte
+            ced = 10 #Variavel do tipo intiro de nome ced recebe dez
+        elif ced == 10:#Se cedula for dez
+            ced = 1 #Variavel do tipo inteiro de nome ced recebe um
+        totced = 0 #Variavel do tipo inteiro de nome totced recebe zero
+        if total == 0:#Se total for zero
+              #totced = 0 #Variavel do tipo inteiro de nome totced recebe zero
+
+              break#parada forcada do programa
+
+print("\033[0;33;44m=\033[m" * 14)#Linha vazia
+print("\033[0;33;42mVolte sempre ao Banco CEV! Tenha um bom dia.\033[m")#Saida de dados 2
+print("\033[0;33;44m=\033[m" * 14)#Linha vazia
