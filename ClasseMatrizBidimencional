@@ -1,0 +1,36 @@
+using System;//Utilitarios
+using System.Globalization;
+using System.Collections;
+using System.Collections.Generic;
+//using System.Collections.Generic;
+//using UnityEngine;
+//using UnityEngine.InputStem;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MatrizBidimensionalExercicioDeFixacaoE//Projeto
+{
+    internal class MatrizBidimencional//Classe
+    {//Inicio da classe
+        public double ValorUm { get;private  set; }//Atributos
+        public double ValorDois { get; private set; }
+        public double Resultado { get; private set; }
+
+        public MatrizBidimencional(double valorum, double valordois, double resultado)//Construtor 1
+        {
+            ValorUm = valorum;//Maiusculo recebe minusculo
+            ValorDois = valordois;
+            Resultado = resultado;
+        }
+        public void MediaDeDoisValores(double tirarmediadedoisvalores)//Metodo 1
+        {
+            Resultado = ValorUm + ValorDois / 2;//Atributo Resultado recebe atributo ValorUm mais atributo ValorDois dividido por dois
+        }
+        public override string ToString()//ToString 1
+        {
+            return "Resultado: "//Texto
+                + Resultado.ToString("F2", CultureInfo.InvariantCulture);//Saida de dados 1
+        }
+    }//Final da classe
+}
