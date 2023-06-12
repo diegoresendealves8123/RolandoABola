@@ -1,47 +1,46 @@
-using System;//Utilitarios//MatrizBidimencionalExercicioDefixacaoE
+using System;//Utilitarios//Parei no MatrizBidimencionalExercicioDFixacaoF
 using System.Globalization;
 using System.Collections;
 using System.Collections.Generic;
 //using UnityEngine;
-//using UnityEngine.inputSystem;
+//using Engine.InputSystem;
 
 namespace Course
 {
-    class Program//Programa principal
+    class Program//programa principal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("=========================================================================================================");
-            Console.WriteLine("                            MATRIZ BIDIMENCIONAL EXERCICIO DE FIXACAO E                                  ");
-            Console.WriteLine("=========================================================================================================");
-            Console.WriteLine("");//Entrada de dados 1
-            int n = int.Parse(Console.ReadLine());
-            int[,] mat = new int[n, n];//Tipo da matriz na posicao zero nome da matriz recebe instanciacao da matriz tipo da matriz na posicao n n
-            for (int i = 0; i < n; i++)//for argumento para fora coorpo dentro do argumento valor de i i menor que n i mais mais//for 1
-            {//Parei aqui//O programa nao está pronto
-                for (int j = 0; j < n; j++)//for argumento para fora corpo dentro do argumento valor de j j menor que n j mais mais//for 2
+            Console.WriteLine("===========================================================================================================");
+            Console.WriteLine("                                 MATRIZ BIDIMENCIONAL EXERCICIO DE FIXACAO F                               ");
+            Console.WriteLine("===========================================================================================================")
+                Console.WriteLine("");//Entrada de dados 1
+                int n = int.Parse(Console.ReadLine());
+            int[,] mat = new int[n, n];//Tipo da matriz na posicao zero nome da matriz recebe instanciacao da matriz tipo da matriz na posicao n n para fora fecha
+            for ()
+            {
+                string[] values = Console.ReadLine().Split(" ");//Parei aqui//O programa nao está pronto
+                for ()
                 {
-                    Console.WriteLine("");
+
                 }
             }
-            Console.WriteLine("Diagonal principal: ");//Saida de dados 1
-            for (int i = 0; i < n; i++)//for argumento para fora corpo dentro do argumento valor de i i menor que n i mais mais//for 3
+            for ()
             {
-                Console.WriteLine("");
+
             }
-            int count = 0;//Variavel do tipo inteiro de nome count comeca com zero
-            for (int i = 0; i < n; i++)//for argumento para fora corpo dentro do argumento valor de i i menor que n i mais mais//for 4
+            for ()
             {
-                for (int j = 0; j < n; j++)//for argumento para fora corpo denmtro do argumento valor de j j menor que n j mais mais//for 5
+                for ()
                 {
-                    if (mat[i, j] < 0)//if argumento para fora corpo dentro do argumento nome da matriz na posicao i j menor que zero//if 1
+                    if ()
                     {
-                        count += 1;//Variavel do tipo inteiro de nome count mais igual a um
+
                     }
                 }
             }
             Console.WriteLine("");//Saida de dados 2
-            Console.WriteLine("=========================================================================================================");
+            Console.WriteLine("===========================================================================================================");
         }
     }
 }
