@@ -1,0 +1,32 @@
+from time import sleep#Da biblioteca tempo importar somente o recurso dormir
+print("\033[0;30;44m=\033[m" * 100)
+print("\033[0;30;42mBANCO CURSO EM VIDEO\033[m")
+print("\033[0;30;44m=\033[m" * 100)
+valor = int(input("\033[0;30;42mQual e o valor que voce quer sacar? \033[m"))
+total = valor#Variavel do tipo inteiro de nome total recebe variavel do tipo inteiro de nome valor
+ced = 50 #Variavel do tipo inteiro de nome ced comeca com cinquenta
+totced = 0 #Variavel do tipo inteiro de nome totced comeca com zero
+while True:#Enquanto for verdade o programa roda para sempre
+    if total >=ced:#Se variavel do tipo inteiro de nome total for maior ou igual a variavel do tipo inteiro de nome ced
+        total -= ced#Variavel do tipo inteiro de nome total menor igual a variavel do tipo inteiro de nome ced
+        totced += 1 #Variavel do tipo inteiro de nome totced mais igual a um
+#print("\033[0;30;44m=\033[m" * 100
+    else:#Se nao
+        if totced > 0:#Se totced for maior que zero
+            print("Total de {} cedulas de {} reiais".format(totced, ced))  # Saida de dados 1
+        elif ced == 50:#Se cedulas for cinquenta
+            ced = 20 #Variavel ced recebe vinte
+
+
+        elif ced == 20:#Se ced for vinte
+            ced = 10 #Variavel ced recebe dez
+        elif ced == 1:#Se ced for um
+            ced = 1 #Variavel ced recebe um
+        totced = 0  # Variavel total de cedulas recebe zero
+        elif total == 0: #Se toital for zero//Parei aqui//O programa está pronto mas com erros
+            break#Parada forcada do programa
+
+print("\033[0;30;44m=\033[m" * 100)#Linha vazia
+print("\033[0;30;42mVolte sempre ao banco Curso Em Video! Tenha um bom dia.\033[m")#Saida de dados 2
+#print("")#Linha vazia
+print("\033[0;30;44=\033[m" * 100)#Linha vazia
