@@ -1,4 +1,4 @@
-using System.Collections;//Parei no SistemaDeRodarColetaveisI
+using System.Collections;//Parei no SistemaDeRodarColetaveisO
 using System.Collections.Generic;
 using UnityEngine;
 
