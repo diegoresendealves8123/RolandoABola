@@ -1,37 +1,34 @@
-using System;//Utilitarios//Parei no MatrizBidimencionalExercicioDFixacaoF
+using System;//Utilitarios//Parei no MatrizBidimencionalExercicioDeFixacaoG
 using System.Globalization;
 using System.Collections;
 using System.Collections.Generic;
 //using UnityEngine;
-//using Engine.InputSystem;
+//using UnityEngine.inputSystem;
 
-namespace Course
+namespace course
 {
-    class Program//programa principal
+    class Program//Programa principal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("===========================================================================================================");
-            Console.WriteLine("                                 MATRIZ BIDIMENCIONAL EXERCICIO DE FIXACAO F                               ");
-            Console.WriteLine("===========================================================================================================")
-                Console.WriteLine("");//Entrada de dados 1
-                int n = int.Parse(Console.ReadLine());
-            int[,] mat = new int[n, n];//Tipo da matriz na posicao zero nome da matriz recebe instanciacao da matriz tipo da matriz na posicao n n para fora fecha
-            for ()
+            Console.WriteLine("Tamanho da Matriz: ");//Entrada de dados 1
+            int n = int.Parse(Console.ReadLine());
+            int[,] mat = new int[n, n];//Tipo da matriz na poscao zero nome da matriz recebe instanciacao da matriz tipo da matriz na posicao n n
+            for ()//for 1
             {
-                string[] values = Console.ReadLine().Split(" ");//Parei aqui//O programa nao está pronto
-                for ()
+                for ()//for 2
                 {
 
                 }
             }
-            for ()
+            for ()//for 3
             {
 
             }
-            for ()
+            int count = 0;//Variavel do tipo inteiro de nome count comeca com zero
+            for ()//for 4
             {
-                for ()
+                for ()//for 5
                 {
                     if ()
                     {
@@ -39,8 +36,8 @@ namespace Course
                     }
                 }
             }
-            Console.WriteLine("");//Saida de dados 2
-            Console.WriteLine("===========================================================================================================");
+            Console.WriteLine("Numeros negativos: " + count);//Saida de dados 2
         }
+        
     }
 }
