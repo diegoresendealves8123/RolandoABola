@@ -1,43 +1,20 @@
-using System;//Utilitarios//Parei no MatrizBidimencionalExercicioDeFixacaoG
+using System;//Utilitarios//Parei no MatrizBidimencionalExercicioDeFixacaoH
 using System.Globalization;
 using System.Collections;
 using System.Collections.Generic;
-//using UnityEngine;
+//using unityEngine;
 //using UnityEngine.inputSystem;
 
-namespace course
+namespace Course
 {
-    class Program//Programa principal
+    class program//Programa principal
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Tamanho da Matriz: ");//Entrada de dados 1
-            int n = int.Parse(Console.ReadLine());
-            int[,] mat = new int[n, n];//Tipo da matriz na poscao zero nome da matriz recebe instanciacao da matriz tipo da matriz na posicao n n
-            for ()//for 1
-            {
-                for ()//for 2
-                {
-
-                }
-            }
-            for ()//for 3
-            {
-
-            }
-            int count = 0;//Variavel do tipo inteiro de nome count comeca com zero
-            for ()//for 4
-            {
-                for ()//for 5
-                {
-                    if ()
-                    {
-
-                    }
-                }
-            }
-            Console.WriteLine("Numeros negativos: " + count);//Saida de dados 2
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");//Parei aqui//O programa nao está pronto
         }
-        
     }
 }
