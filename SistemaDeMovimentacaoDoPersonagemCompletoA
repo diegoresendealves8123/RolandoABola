@@ -1,0 +1,53 @@
+using System;//Utilitarios//Parei no SistemaDeMovimentacaoDoPersonagemCompletoA
+using System.Globalization;
+using System.Collections;
+using System.Collections.Generic;
+using unityEngine;
+using UnityEngine.InputSystem;
+using TMPro;
+using System.Numerics;
+
+public class SistemaDemovimentacaoDoPersonagemCompletoA : Monobehaviour//Classe
+{//Inicio da classe
+    public double speed = 1;//Variavel publica do tipo double de nome speed comeca com um//Variaveis
+    public Rigidbody rb;//Variavel publica do tipo Rigidbody de nome rb
+    public double movementx;//Variavel publica do tipo double de nome movementx
+    public double movementy;//Variavel publica do tipo double de nome movementy
+    public TextMeshProUGUI pointsText;//Variavel publica do tipo TextMashProUGI de nome pointsText
+    public GameObject winText;//Variavel publica do tipo GameObject de nome winText
+    public int totalPoins;//Variavel publica do tipo inteiro de nome totalPonts
+    private int points;//Variavel publica do tipo inteiro de nome points
+
+    public void Start()//Metodo publico do tipo void de nome Start argumento para fora corpo//Metodo 1
+    {
+        rb = GetComponent<Rigidbody>();//Nome da variavel recebe GetComponet argumento argumento para fora fecha dentro do argumento Rigidbody dentro do argumento vazio
+    }
+    public void Update()//Metodo publico do tipo void de nome Update argumento para fora corpo//metodo 2
+    {
+
+    }
+    public void FixedUpdate()//Metodo publico do tipo void de nome FixedUpdate argumento para fora corpo
+    {
+        Vector3 movement = new Vector3(movementx, 0.0f, movementy);//Nome do vetor nome da variavel recebe instanciacao do vetor nome do vetor argumento para fora fecha dentro do argumento movimentacao do personagem
+        rb.AddForce(movement * speed);//Nome da variavel ligado no AddForce argumento para fora fecha dentro do argumento movement multiplicado por speed
+    }
+    public void OnMove(InputValue movementValue)//Metodo publico do tipo void de nome OnMove argumento para fora corpo//Metodo 4
+    {
+        Vector2 movementVector = movementValue.Get<Vector2>();//Nome do vetor nome da variavel recebe nome da variavel ligado no Get argumento argumento para fora fecha detro do argumento nome do vetor dentro do argumento vazio
+        movementx = movementVector.X;//Nome da variavel recebe nome da variavel ligado no movimento x
+        movementy = movementVector.Y;//Nome da variavel recebe nome da variavel ligado no movimento y
+    }
+    public void OnTriggerEnter(Collider other)//Metodo publico do tipo void de nome OnTriggerEnter argumento para fora corpo//metodo 5
+    {
+        if (other.Comparetag("Pickup")//if argumento para fora corpo dentro do argumento other ligado no Comparetag detro do argumento Pickup//if 1
+        {
+            points += 1;//Nome da variavel mais igual a um
+            SetPointsText();//Nome do metodo argumento para fora fecha
+            //Parei aqui//O programa nao está pronto
+        }
+    }
+    public void SetPointsText()//Metodo publico do tipo void de nome SetPointsText argumento para fora corpo//metodo 6
+    {
+
+    }
+}//Final da classe
